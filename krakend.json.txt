@@ -1,0 +1,72 @@
+{
+    "version": 3,
+    "name": "Employee API Gateway",
+    "port": 8080,
+    "endpoints": [
+        {
+            "endpoint": "/employees",
+            "method": "GET",
+            "output_encoding": "no-op",
+            "backend": [
+                {
+                    "url_pattern": "/employees",
+                    "host": [
+                        "http://host.docker.internal:8082"
+                    ]
+                }
+            ]
+        },
+        {
+            "endpoint": "/employees/{id}",
+            "method": "GET",
+            "output_encoding": "no-op",
+            "backend": [
+                {
+                    "url_pattern": "/employees/{id}",
+                    "host": [
+                        "http://host.docker.internal:8082"
+                    ]
+                }
+            ]
+        },
+        {
+            "endpoint": "/employees/create",
+            "method": "POST",
+            "output_encoding": "no-op",
+            "backend": [
+                {
+                    "url_pattern": "/employees/create",
+                    "host": [
+                        "http://host.docker.internal:8082"
+                    ]
+                }
+            ]
+        },
+        {
+            "endpoint": "/employees/{id}",
+            "method": "PUT",
+            "output_encoding": "no-op",
+            "backend": [
+                {
+                    "url_pattern": "/employees/{id}",
+                    "host": [
+                        "http://host.docker.internal:8082"
+                    ]
+                }
+            ]
+        },
+        {
+            "endpoint": "/employees/{id}",
+            "method": "DELETE",
+            "output_encoding": "no-op",
+            "backend": [
+                {
+                    "url_pattern": "/employees/{id}",
+                    "host": [
+                        "http://host.docker.internal:8082"
+                    ]
+                }
+            ]
+        }
+    ]
+}
